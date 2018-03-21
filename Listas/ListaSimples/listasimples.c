@@ -24,6 +24,21 @@ Lista* aloca_lista() {
 	return lista;
 }
 
+void libera_lista(Lista* lista){
+
+	elemento* aux = lista->inicio;
+
+	while(aux != NULL){
+
+		lista->inicio = lista->inicio->proximo;
+		free(aux);
+		aux = lista->inicio;
+	}
+
+	free(lista);
+
+}
+
 
 int verifica_lista(Lista* lista){
 	if(lista->inicio == NULL && lista->fim == NULL){
@@ -89,4 +104,6 @@ void main () {
 	}
 
 	mostra_lista(lista);
+
+	libera_lista(lista);
 }

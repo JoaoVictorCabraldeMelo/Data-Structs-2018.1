@@ -1,0 +1,25 @@
+### Makefile ###
+
+
+all: lista
+
+
+lista: listasimples.o
+	
+	gcc -g -Wall -o listasimples listasimples.o main.c
+
+listasimples.o: listasimples.c
+
+	gcc -c  listasimples.c
+
+clean:
+
+	rm -rf *.o
+
+rmproper: clean
+
+	rm -rf listasimples
+
+run:
+
+	./listasimples

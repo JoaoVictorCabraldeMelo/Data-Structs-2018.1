@@ -23,6 +23,8 @@ void inserir_elemento(int dado, Lista* lista);
 
 void mostrar_lista(Lista* lista);
 
+void libera_lista(Lista* lista);
+
 void main();
 
 

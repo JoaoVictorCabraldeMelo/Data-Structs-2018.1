@@ -1,6 +1,6 @@
 #include <stdio.h>
 #include <stdlib.h>
-#include "tamanho.h"
+#include "listasimples.h"
 
 celula* aloca_celula(int valor){
 	celula* elemento = (celula *) malloc(sizeof(celula));

@@ -1,6 +1,6 @@
 #include <stdio.h>
 #include <stdlib.h>
-#include "tamanho.h"
+#include "listasimples.h"
 
 
 int main () {

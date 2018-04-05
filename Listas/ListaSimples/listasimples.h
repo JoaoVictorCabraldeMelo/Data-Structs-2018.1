@@ -1,5 +1,5 @@
-#ifndef __TAMANHO_H__
-#define __TAMANHO_H__
+#ifndef __LISTASIMPLES_H__
+#define __LISTASIMPLES_H__
 
 /*Um jeito de declarar uma estrutura de uma lista simples */
 typedef struct reg celula;

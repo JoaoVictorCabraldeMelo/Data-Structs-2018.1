@@ -1,31 +1,50 @@
-#ifndef __LISTA_SIMPLES__
-#define __LISTA_SIMPLES__
+#ifndef __TAMANHO_H__
+#define __TAMANHO_H__
+
+/*Um jeito de declarar uma estrutura de uma lista simples */
+typedef struct reg celula;
+
+/*---------------------------------------------------------*/
+struct reg {
+	int dado;
+	celula *prox;
+};
+/*---------------------------------------------------------*/
+
+typedef struct {
+	celula *inicio;
+}lista;
+/*Um ponteiro para o inicio da lista*/
 
 
-typedef struct ptr{ /* Estrutura do Elemento */
-	int info;
-	struct ptr* proximo; 
-}elemento;
+void tamanho_struct(celula celula);
 
-typedef struct { /*Inicio e o fim da lista */
-	elemento* inicio;
-	elemento* fim;
-}Lista;
+celula* aloca_celula(int valor);
+
+lista* aloca_lista();
+
+void remove_lista(lista* list);
+
+void insere_elemento(int valor, lista* list);
+
+void mostra_lista(lista* list);
+
+int altura_celula(int dado, lista* list);
+
+void mostra_altura_cel(lista* list);
+
+int profundida_lista(lista* list);
+
+void mostra_profundida(lista* list);
+
+int busca(int x, lista* list);
+
+int verifica_crescente(lista* list);
+
+int menor_elemento(lista* list);
+
+void mostra_menor(int menor);
 
 
-elemento* aloca_elemento(int dado);
 
-Lista* aloca_lista();
-
-int verifica_lista(Lista* lista);
-
-void inserir_elemento(int dado, Lista* lista);
-
-void mostrar_lista(Lista* lista);
-
-void libera_lista(Lista* lista);
-
-void main();
-
-
-#endif
+#endif 
